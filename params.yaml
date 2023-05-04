@@ -1,0 +1,55 @@
+# Base:
+base:
+  version: v.0.0.1
+
+# mention source of data:
+data_source:
+  raw_data_path: Raw Data/insurance.csv
+
+# Detailed about Categorical features, Numerical features and output column:
+data_defination:
+  categorical_cols: ['sex', 'smoker', 'region']
+  numerical_cols: ['age', 'bmi', 'children', 'expenses']
+  xcols: ['age', 'bmi', 'children', 'sex', 'smoker', 'region']
+  output_col: 'expenses'
+
+# Splitting:
+split:
+  random_state: 40
+  split_ratio: 0.20
+
+# A particular folder where you store Raw Dara, Processed Data, Model, Logs files, Model Performance Report, etc.
+artifacts:
+  artifacts_dir: artifacts
+  # Mention Logs files:
+  log_files:
+    log_files_dir: artifacts/Logs
+    training_log_file: artifacts/Logs/training_logs.txt
+    evaluation_log_file: artifacts/Logs/evaluation_logs.txt
+    prediction_file: artifacts/Logs/prediction_logs.txt
+  # Raw data directory & raw data:
+  raw_data:
+    raw_data_dir: artifacts/Raw_Data
+    new_raw_data_path: artifacts/Raw_Data/data.csv
+  # Processed data:
+  processed_data:
+    processed_dir: artifacts/Processed_Data
+    train_path: artifacts/Processed_Data/train.csv
+    test_path: artifacts/Processed_Data/test.csv
+# Matrix:
+  matrix:
+    matrix_dir: artifacts/Matrix
+    matrix_file_path: artifacts/Matrix/key_matrix.json
+  # Model:
+  model:
+    model_dir: artifacts/Model
+    model_path: artifacts/Model/model.joblib
+  # Report:
+  report:
+    reports_dir: artifacts/Model_Performance_Report
+    scores: artifacts/Model_Performance_Report/score.json
+  # prediction:
+  prediction:
+    prediction_dir: artifacts/Prediction
+    prediction_file: artifacts/Prediction/predict.csv
+
