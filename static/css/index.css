@@ -1,0 +1,112 @@
+
+#main{
+	width: 355px;
+	height: 620px;
+/*	border: 2px solid black;*/
+	margin-top: 10px;
+	margin-left: 500px;
+	background-color: #96FDE3;
+	border-radius: 5px;
+	box-shadow: 5px 5px #B1B5B4;
+}
+.div_0{
+	width: 100%%;
+	height: 10%;
+/*	border: 2px solid black;*/
+}
+.div_0 h2{
+	text-align: center;
+	padding-top: 20px;
+}
+.div_1{
+	width: 100%%;
+	height: 15%;
+/*	border: 2px solid black;*/
+}
+.div_1 button{
+	margin: 15px 20px;
+	height: 30px;
+	border: none;
+	background-color: #F290FA;
+	border-radius: 5px;
+	box-shadow: 3px 3px grey;
+	cursor: pointer;
+}
+.div_1 button:hover{
+	background-color: #94FB70;
+}
+.div_1 span{
+	padding: 15px 22px;
+	font-weight: bolder;
+}
+.div_2{
+	width: 100%%;
+	height: 65%;
+/*	border: 2px solid black;*/
+}
+.div_2_2{
+	width: 100%;
+	height: 5%;
+/*	border: 2px solid red;*/
+}
+.div_2_2 h4{
+	padding-left: 22px;
+	padding-bottom: 10px;
+}
+.div_2 form{
+	width: 100%;
+	height: 88%;
+/*	border: 2px solid red;*/
+}
+.myfrm{
+	width: 100%;
+	height: 13%;
+	margin-top: 5px;
+/*	border: 2px solid green;*/
+}
+.myfrm span{
+	padding: 0px 22px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #530363;
+}
+.myfrm input{
+	margin: 1px 22px;
+	width: 300px;
+	height: 20px;
+	border: 2px solid black;
+	padding-left: 5px;
+	border-radius: 5px;
+	background: transparent;
+	background-color: none;
+	color: #015600;
+}
+
+.myfrm select{
+	margin: 2px 22px;
+	width: 309px;
+	height: 25px;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding-left: 5px;
+	background: transparent;
+	color: #015600;
+}
+.myfrm button{
+	margin: 5px 22px;
+	width: 30%;
+	height: 30px;
+	border: none;
+	background-color: #83EA87;
+	border-radius: 5px;
+	box-shadow: 3px 3px grey;
+	cursor: pointer;
+}
+.myfrm button:hover{
+	background-color: #94FB70;
+}
+.div_3 .sp1{
+	padding: 0px 22px;
+	font-weight: bolder;
+	color: #013000;
+}
