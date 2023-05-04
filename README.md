@@ -23,5 +23,8 @@ The Goal of this Project is to give people an estimate of how much they need bas
 * pip install -r requirements.txt
 * python main.py
 
+## Analysis Report:
+[Analysis Report](Analysis%20Report/analysis%20report.pdf)
+
 ## Web App:
 ![Alt web_app](web%20app.PNG)
