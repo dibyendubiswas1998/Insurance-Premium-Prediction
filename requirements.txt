@@ -1,5 +1,5 @@
 # local_lib
-# -e .
+-e .
 
 # Data Manipulation libaries:
 numpy
@@ -13,6 +13,7 @@ seaborn
 
 # ML related  libaries:
 scikit-learn
+xgboost
 
 # Deployment libaries:
 flask
