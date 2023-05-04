@@ -1,0 +1,42 @@
+2023-05-04/10:57:25		training process starts:
+
+2023-05-04/10:57:25		Step-1: load & save process start::::::::::::::::::::::::::::::::
+2023-05-04/10:57:25		read the data, shape: (1338, 7)
+2023-05-04/10:57:25		data loaded successfully
+2023-05-04/10:57:25		create directory for raw save the data as: artifacts/Raw_Data/data.csv
+2023-05-04/10:57:25		store data in : artifacts/Raw_Data/data.csv
+2023-05-04/10:57:25		data saved successfully
+
+
+2023-05-04/10:57:25		pre-processed operation starts:::::::::::::::::::::::::::::::::::::
+2023-05-04/10:57:25		Handle the Outliers using IQR method, col: age
+2023-05-04/10:57:25		Handle the Outliers using IQR method, col: bmi
+2023-05-04/10:57:25		Handle the Outliers using IQR method, col: children
+2023-05-04/10:57:25		Handle the Outliers using IQR method, col: expenses
+2023-05-04/10:57:25		successfully handle the outliers
+2023-05-04/10:57:25		perform Mean encoding on xcol: sex, ycol: expenses
+2023-05-04/10:57:25		perform target encoding encoding on xcol: sex
+2023-05-04/10:57:25		perform Mean encoding on xcol: smoker, ycol: expenses
+2023-05-04/10:57:25		perform target encoding encoding on xcol: smoker
+2023-05-04/10:57:25		perform Mean encoding on xcol: region, ycol: expenses
+2023-05-04/10:57:25		perform target encoding encoding on xcol: region
+2023-05-04/10:57:25		successfully handle the outliers & apply the mean encoding
+
+
+2023-05-04/10:57:25		splitting operation starts:::::::::::::::::::::::::::::::::::::
+2023-05-04/10:57:25		create directory for saved data preprocessed data, path artifacts/Processed_Data
+2023-05-04/10:57:26		split ghe data in tran.csv: (1070, 7) & test.csv: (268, 7)
+2023-05-04/10:57:26		create directory for storing the data: artifacts/Processed_Data
+2023-05-04/10:57:26		store data in : artifacts/Processed_Data/train.csv
+2023-05-04/10:57:26		store data in : artifacts/Processed_Data/test.csv
+2023-05-04/10:57:26		successfully split the data (1070, 7), (268, 7)
+
+
+2023-05-04/10:57:26		separate x_train & y_train  feature
+2023-05-04/10:57:26		scaled the x_train data using StandardScaler() method
+2023-05-04/10:57:26		create svr model
+2023-05-04/10:57:27		create the GradientBoostingRegressor model.
+2023-05-04/10:57:27		create directory for store the model artifacts/Model
+2023-05-04/10:57:28		successfully model is created.
+
+

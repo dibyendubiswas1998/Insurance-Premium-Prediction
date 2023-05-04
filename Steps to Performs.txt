@@ -1,0 +1,79 @@
+# step 00:
+	create directories & files:
+		artifacts (directory)
+		|----> Data (directory)
+		|       | ------------------ data.csv (file)
+		|
+		|----> Logs (directory)
+		|       | ------------------ training_logs.txt (file)
+		|       | ------------------ evaluation_logs.txt (file)
+		|       | ------------------ prediction_logs.txt (file)
+		|
+		| ---> Preprocessed_Data (directory)	
+		|       | ------------------ train.csv (file)
+		|       | ------------------ test.csv (file)
+		|
+		| ---> Processed_Matrix (directory)
+		|       | ------------------ matrix.csv (file)
+		|
+		| ---> Model (directory) 
+		|       | ------------------ model.joblib (file)
+		|
+		| ---> Permormance_Report (directory)
+		|       | ------------------ report.json (file)
+		|
+			
+
+
+# step 01: 
+
+	src/utils/common_utils.py:
+		write all necessary file handling related details.
+	
+# step 02:
+	
+	src/load_and_save.py:
+		def load_data():
+			load_data functions helps to load the data from particular directory (from Raw Data)
+		def save_data():
+			save_data functions helps to save data in a particular directory (to artifacts/Preprocessed_Data)
+
+# step 03:
+	
+	src/preprocessed.py:
+		def mean_encoding():
+			mean_encoding() helps to apply mean encoding based on target feature.
+		def handle_outliers():
+			handle_outliers() function helps to handle the outlier based on IQR method.
+
+# step 04:
+	
+	src/split_and_save.py:
+		def split_and_save_data():
+			split_and_save_data function helps to split & save the data
+                       
+# step 05:
+
+	src/model_creation.py:
+		def model_creation():
+			model_creation() function helps to create model based on train.csv data using best hyperparameter.
+
+# step 06:
+	
+	src/training.py:
+		def training():
+			training() function helps to train the model, after that save the model to a particular directory.
+
+# step 07:
+
+	src/evaluation.py:
+		def evaluation():
+			evaluation() function helps to evaluate the model based on test data and save the score in a directory.
+
+# step 08:
+
+	create web app for prediction.
+
+params.yaml:
+
+

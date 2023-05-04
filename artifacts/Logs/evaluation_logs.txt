@@ -1,0 +1,9 @@
+2023-05-04/10:57:28		read the data, shape: (1070, 7)
+2023-05-04/10:57:28		read the data, shape: (268, 7)
+2023-05-04/10:57:28		read the train & test data
+2023-05-04/10:57:28		load the model from artifacts/Model/model.joblib
+2023-05-04/10:57:28		Check performance matrix based on train data: {'mean_absolute_error': 1666.3191398837907, 'mean_square_error': 10002327.485866157, 'r2_score': 0.9026949402023454, 'root_mean_square_error': 3162.645646585491, 'range_of_output': [1135.94, 34489.35625]}
+2023-05-04/10:57:28		Check performance matrix based on test data: {'mean_absolute_error': 2603.505736796986, 'mean_square_error': 20853219.29817981, 'r2_score': 0.8000828601430593, 'root_mean_square_error': 4566.532524594543, 'range_of_output': [1121.87, 34489.35625]}
+2023-05-04/10:57:28		successfully model evaluation process is completed
+
+

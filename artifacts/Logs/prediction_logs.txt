@@ -1,0 +1,3 @@
+2023-05-04/10:57:39		prediction process is start
+2023-05-04/10:57:39		load the model from artifacts/Model/model.joblib
+2023-05-04/10:57:39		prediction is done, expected value: [37117.68821742]
