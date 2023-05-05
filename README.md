@@ -19,6 +19,10 @@ The Goal of this Project is to give people an estimate of how much they need bas
   * finalize the best ml model,
   * create web app to prediction based on new test data.
 
+## ML Pipleline:
+![Capture](https://user-images.githubusercontent.com/67157274/236438204-b1a53d6d-a61b-4b64-b646-524884290bac.PNG)
+<br>
+
 ## How to Execute:
 * pip install -r requirements.txt
 * python main.py
