@@ -1,0 +1,33 @@
+# Data Manipulation libaries:
+numpy
+pandas
+scipy
+stats
+
+# Data Visualization libaries:
+matplotlib
+seaborn
+
+# ML related  libaries:
+scikit-learn
+xgboost
+
+# Deployment libaries:
+flask
+
+# dvc:
+dvc
+
+# mlflow:
+mlflow
+
+# aws s3:
+boto3
+
+# others:
+python-box==6.0.2
+pyYAML
+tqdm
+
+# local_lib
+-e .

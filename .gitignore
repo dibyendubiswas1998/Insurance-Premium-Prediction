@@ -1,3 +1,14 @@
+# data & model:
+artifacts/data
+artifacts/model
+# documents:
+documents/word files
+# secrects:
+config/secrect.yaml
+# package:
+Insurance_Premium_Prediction.egg-info/*
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
