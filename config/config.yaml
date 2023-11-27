@@ -16,8 +16,9 @@ artifacts:
   # processed_data:
   processed_data:
     processed_dir: artifacts/processed_data
-    train_path: artifacts/processed_data/train.npy
-    test_path: artifacts/processed_data/test.npy
+    train_path: artifacts/processed_data/train.csv
+    test_path: artifacts/processed_data/test.csv
+    encoded_metrics_file_path: artifacts/processed_data/encoded_metrics.json
   
   # model:
   model:
@@ -33,4 +34,4 @@ artifacts:
 # dataset split ratio
 split_ratio:
   test_size: 0.3
-  random_dtate: 42
+  random_state: 42
