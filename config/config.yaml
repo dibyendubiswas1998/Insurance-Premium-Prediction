@@ -1,0 +1,36 @@
+# logs:
+logs:
+  logs_dir: logs
+  log_file: logs/running_logs.log
+
+
+# artifacts:
+artifacts: 
+  artifacts_dir: artifacts
+
+  # dataset:
+  data:
+    data_dir: artifacts/data
+    raw_data_file_name: artifacts/data/data.csv
+  
+  # processed_data:
+  processed_data:
+    processed_dir: artifacts/processed_data
+    train_path: artifacts/processed_data/train.npy
+    test_path: artifacts/processed_data/test.npy
+  
+  # model:
+  model:
+    model_dir: artifacts/model
+    model_path: artifacts/Model/model.joblib
+ 
+  # performance report:
+  report:
+    report_dir: artifacts/report
+    file_name: artifacts/report/performace_report.json
+
+
+# dataset split ratio
+split_ratio:
+  test_size: 0.3
+  random_dtate: 42
