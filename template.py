@@ -15,6 +15,7 @@ list_of_files = [
 
     "artifacts/.gitkeep", # artifacts directory
     "artifacts/data/.gitkeep", # data directory
+    "artifacts/processed_data/.gitkeep", # processed_data directory
     "artifacts/model/.gitkeep", # model directory
     "artifacts/report/performace_report.json", # artifacts/report directory for performance report
     

@@ -1,5 +1,6 @@
 # data & model:
 artifacts/data
+artifacts/processed_data
 artifacts/model
 # documents:
 documents/word files
