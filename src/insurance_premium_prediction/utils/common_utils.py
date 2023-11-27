@@ -2,6 +2,7 @@ import os
 import shutil
 import json
 import yaml
+import joblib
 from pathlib import Path
 from box.exceptions import BoxValueError
 from box import ConfigBox
@@ -159,6 +160,39 @@ def load_json_file(file_path:Path) -> ConfigBox:
         raise ex
 
 
+
+def save_raw_local_df(data, data_path, header=False):
+    """
+        save the data to specific folder.\n
+        :param data: data
+        :param data_path: data_path
+        :param header: True or False
+        :return: save data
+    """
+    try:
+        if header:
+            new_col = [col.replace(' ', "_") for col in data.columns]
+            data.to_csv(data_path, index=False, header=new_col)
+        else:
+            data.to_csv(data_path, index=False)
+            
+    except Exception as e:
+        raise e
+
+
+def save_model(model_name, model_path:Path):
+    """
+        save the model in a given directory:
+        :param model: mention model
+        :param model_path: model_path
+        :return: save model
+    """
+    try:
+        with open(model_path, 'wb') as f:
+            joblib.dump(model_name, f)
+
+    except Exception as e:
+        raise e
 
 
 if __name__ == "__main__":
