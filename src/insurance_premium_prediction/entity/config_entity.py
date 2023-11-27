@@ -53,3 +53,33 @@ class DataInfoConfig:
     columns: list
     Y_feature_name: str
 
+
+@dataclass(frozen=True)
+class DataPreprocessingConfig:
+    """
+        Represents the configuration for data preprocessing.
+
+        Attributes:
+            data_path (Path): The path to the main data file.
+            categorical_cols (list): A list of categorical columns in the data.
+            numerical_cols (list): A list of numerical columns in the data.
+            x_cols (list): A list of feature columns.
+            y_feature (str): The target feature.
+            train_data_path (Path): The path to the training data file.
+            test_data_path (Path): The path to the test data file.
+            encoded_metrics_file_path (Path): The path to the file where encoded metrics will be saved.
+            test_size (float): The ratio of test data size to the total data size.
+            random_state (int): The random state for data splitting.
+            log_file (Path): The path to the log file.
+    """
+    data_path: Path
+    categorical_cols: list
+    numerical_cols: list
+    x_cols: list
+    y_feature: str
+    train_data_path: Path
+    test_data_path: Path
+    encoded_metrics_file_path: Path
+    test_size: float
+    random_state: int
+    log_file: Path

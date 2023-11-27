@@ -5,12 +5,12 @@ stages:
     deps:
     - path: config/config.yaml
       hash: md5
-      md5: d1ca02f35145f8fac5c9f53ee81b774b
-      size: 698
+      md5: 346bc04c1a3b7110ceb5a4b6875459ab
+      size: 775
     - path: config/secrect.yaml
       hash: md5
-      md5: 55004ad758912c5fb5d8e016b7f576c2
-      size: 629
+      md5: 48eeb01654ecb3c96fc0b985d392d307
+      size: 879
     - path: src/insurance_premium_prediction/pipeline/data_ingestion.py
       hash: md5
       md5: 7e0eb9c8dfd9f46e10a7df67a97b629f
@@ -20,3 +20,31 @@ stages:
       hash: md5
       md5: 5a64c6a34169eb73c789fe66d1aaf5d6
       size: 50295
+  data_preprocessing:
+    cmd: python src/insurance_premium_prediction/pipeline/data_preprocessing.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 346bc04c1a3b7110ceb5a4b6875459ab
+      size: 775
+    - path: config/secrect.yaml
+      hash: md5
+      md5: 48eeb01654ecb3c96fc0b985d392d307
+      size: 879
+    - path: src/insurance_premium_prediction/pipeline/data_preprocessing.py
+      hash: md5
+      md5: 2ec69dab70beb7d3a8b19aea77a8c37a
+      size: 1591
+    outs:
+    - path: artifacts/processed_data/encoded_metrics.json
+      hash: md5
+      md5: 12896c3356964c01efd73c23aee6a47e
+      size: 236
+    - path: artifacts/processed_data/test.csv
+      hash: md5
+      md5: 0001d69b16a3694228f99a18ba988083
+      size: 11487
+    - path: artifacts/processed_data/train.csv
+      hash: md5
+      md5: 6aa84dd430b70962cd663f64a616e556
+      size: 26648

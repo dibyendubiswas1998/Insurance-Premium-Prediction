@@ -87,8 +87,58 @@ class ConfigManager:
             raise ex
         
 
+    def get_data_preprocessing_config(self) -> DataPreprocessingConfig:
+        """
+            Retrieves the data preprocessing configuration.
+
+            Returns:
+                DataPreprocessingConfig: The data preprocessing configuration.
+
+            Example Usage:
+                # Initialize the ConfigManager object
+                config_manager = ConfigManager()
+
+                # Call the get_data_preprocessing_config method
+                data_preprocessing_config = config_manager.get_data_preprocessing_config()
+
+                # Print the data preprocessing configuration
+                print(data_preprocessing_config)
+
+            Expected output:
+                DataPreprocessingConfig(
+                data_path='path/to/raw_data_file',
+                categorical_cols=['col1', 'col2', ...],
+                numerical_cols=['col3', 'col4', ...],
+                x_cols=['col1', 'col2', ...],
+                y_feature='target',
+                train_data_path='path/to/train_data',
+                test_data_path='path/to/test_data',
+                encoded_metrics_file_path='path/to/encoded_metrics_file',
+                test_size=0.2,
+                random_state=42,
+                log_file='path/to/log_file'
+                )
+        """
+        try:
+            data_preprocessing_config = DataPreprocessingConfig(
+                data_path=self.config.artifacts.data.raw_data_file_name,
+                categorical_cols=self.secrect.data_info.categorical_cols,
+                numerical_cols=self.secrect.data_info.numerical_cols,
+                x_cols=self.secrect.data_info.x_cols,
+                y_feature=self.secrect.data_info.Y_feature,
+                train_data_path=self.config.artifacts.processed_data.train_path,
+                test_data_path=self.config.artifacts.processed_data.test_path,
+                encoded_metrics_file_path=self.config.artifacts.processed_data.encoded_metrics_file_path,
+                test_size=self.config.split_ratio.test_size,
+                random_state=self.config.split_ratio.random_state,
+                log_file=self.config.logs.log_file
+            )
+            return data_preprocessing_config
+
+        except Exception as ex:
+            raise ex
 
 
 if __name__ == "__main__":
     cc = ConfigManager()
-    print(cc.get_data_ingestion_config())
+    print(cc.get_data_preprocessing_config())
