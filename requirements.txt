@@ -28,6 +28,7 @@ boto3
 python-box==6.0.2
 pyYAML
 tqdm
+ensure
 
 # local_lib
 -e .
