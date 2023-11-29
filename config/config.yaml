@@ -23,7 +23,8 @@ artifacts:
   # model:
   model:
     model_dir: artifacts/model
-    model_path: artifacts/Model/model.joblib
+    model_path: artifacts/model/model.joblib
+    model_params_path: artifacts/model/model_params.json
  
   # performance report:
   report:

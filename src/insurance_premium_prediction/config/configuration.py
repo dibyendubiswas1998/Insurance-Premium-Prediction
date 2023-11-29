@@ -141,6 +141,45 @@ class ConfigManager:
             raise ex
 
 
+    def get_model_training_config(self) -> ModelTrainigConfig:
+        """
+            Retrieves the model training configuration.
+
+            Returns:
+                ModelTrainingConfig: The model training configuration as a ModelTrainingConfig object.
+        """
+        try:
+            model_training_config = ModelTrainigConfig(
+                x_cols=self.secrect.data_info.x_cols,
+                y_feature=self.secrect.data_info.Y_feature,
+                train_data_path=self.config.artifacts.processed_data.train_path,
+                test_data_path=self.config.artifacts.processed_data.test_path,
+                test_size=self.config.split_ratio.test_size,
+                random_state=self.config.split_ratio.random_state,
+                model_path=self.config.artifacts.model.model_path,
+                model_params_path=self.config.artifacts.model.model_params_path,
+                rand_bootstrap=self.params.RandomForestRegressorParams.bootstrap,
+                rand_max_depth=self.params.RandomForestRegressorParams.max_depth,
+                rand_max_features=self.params.RandomForestRegressorParams.max_features,
+                rand_min_samples_leaf=self.params.RandomForestRegressorParams.min_samples_leaf,
+                rand_min_samples_split=self.params.RandomForestRegressorParams.min_samples_split,
+                rand_n_estimators=self.params.RandomForestRegressorParams.n_estimators,
+                rand_random_state=self.params.RandomForestRegressorParams.random_state,
+                grad_n_estimators=self.params.GradientBoostingRegressor.n_estimators,
+                grad_learning_rate=self.params.GradientBoostingRegressor.learning_rate,
+                grad_max_depth=self.params.GradientBoostingRegressor.max_depth,
+                grad_random_state=self.params.GradientBoostingRegressor.random_state,
+                grad_subsample=self.params.GradientBoostingRegressor.subsample,
+                log_file=self.config.logs.log_file
+            )
+            return model_training_config
+
+        except Exception as ex:
+            raise ex
+
+
+
+
 if __name__ == "__main__":
     cc = ConfigManager()
-    print(cc.get_data_preprocessing_config())
+    print(cc.get_model_training_config())

@@ -20,3 +20,29 @@ stages:
       - artifacts/processed_data/encoded_metrics.json
       - artifacts/processed_data/train.csv
       - artifacts/processed_data/test.csv
+  
+  # Stage 03: Model Training
+  model_training:
+    cmd: python src/insurance_premium_prediction/pipeline/model_training.py
+    deps:
+      - src/insurance_premium_prediction/pipeline/model_training.py
+      - config/secrect.yaml
+      - config/config.yaml
+      - artifacts/processed_data/train.csv
+      - artifacts/processed_data/test.csv
+    params:
+      - RandomForestRegressorParams.bootstrap
+      - RandomForestRegressorParams.max_depth
+      - RandomForestRegressorParams.max_features
+      - RandomForestRegressorParams.min_samples_leaf
+      - RandomForestRegressorParams.min_samples_split
+      - RandomForestRegressorParams.n_estimators
+      - RandomForestRegressorParams.random_state
+      - GradientBoostingRegressor.n_estimators
+      - GradientBoostingRegressor.learning_rate
+      - GradientBoostingRegressor.max_depth
+      - GradientBoostingRegressor.random_state
+      - GradientBoostingRegressor.subsample
+    outs:
+      - artifacts/model/model.joblib
+      - artifacts/model/model_params.json
