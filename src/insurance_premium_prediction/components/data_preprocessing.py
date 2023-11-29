@@ -30,7 +30,7 @@ class DataPreprocessing:
 
         Fields:
             config: An instance of the DataPreprocessingConfig class that stores the configuration settings for data preprocessing.
-"""
+    """
     def __init__(self, config: DataPreprocessingConfig):
         self.config = config
     
@@ -53,6 +53,7 @@ class DataPreprocessing:
         try:
             log_file = self.config.log_file # mention log file
             data = pd.read_csv(self.config.data_path) # read the data
+            data = data[self.config.columns] # get only those columns that are required
             data = data.drop_duplicates() # remove duplicates
             log(file_object=log_file, log_message=f"remove the duplicates from the dataset") # logs
             return data

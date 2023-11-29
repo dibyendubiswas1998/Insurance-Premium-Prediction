@@ -107,6 +107,7 @@ class ConfigManager:
             Expected output:
                 DataPreprocessingConfig(
                 data_path='path/to/raw_data_file',
+                columns=['col1', 'col2', ...],
                 categorical_cols=['col1', 'col2', ...],
                 numerical_cols=['col3', 'col4', ...],
                 x_cols=['col1', 'col2', ...],
@@ -122,6 +123,7 @@ class ConfigManager:
         try:
             data_preprocessing_config = DataPreprocessingConfig(
                 data_path=self.config.artifacts.data.raw_data_file_name,
+                columns=self.secrect.data_info.columns,
                 categorical_cols=self.secrect.data_info.categorical_cols,
                 numerical_cols=self.secrect.data_info.numerical_cols,
                 x_cols=self.secrect.data_info.x_cols,

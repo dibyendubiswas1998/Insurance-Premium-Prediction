@@ -61,6 +61,7 @@ class DataPreprocessingConfig:
 
         Attributes:
             data_path (Path): The path to the main data file.
+            columns (list): A list of columns in the data that required.
             categorical_cols (list): A list of categorical columns in the data.
             numerical_cols (list): A list of numerical columns in the data.
             x_cols (list): A list of feature columns.
@@ -73,6 +74,7 @@ class DataPreprocessingConfig:
             log_file (Path): The path to the log file.
     """
     data_path: Path
+    columns: list
     categorical_cols: list
     numerical_cols: list
     x_cols: list
