@@ -46,3 +46,29 @@ stages:
     outs:
       - artifacts/model/model.joblib
       - artifacts/model/model_params.json
+  
+  # Model Evaluation:
+  model_evaluation:
+    cmd: python src/insurance_premium_prediction/pipeline/model_evaluation.py
+    deps:
+      - src/insurance_premium_prediction/pipeline/model_evaluation.py
+      - config/secrect.yaml
+      - config/config.yaml
+      - artifacts/model/model.joblib
+      - artifacts/model/model_params.json
+    params:
+      - RandomForestRegressorParams.bootstrap
+      - RandomForestRegressorParams.max_depth
+      - RandomForestRegressorParams.max_features
+      - RandomForestRegressorParams.min_samples_leaf
+      - RandomForestRegressorParams.min_samples_split
+      - RandomForestRegressorParams.n_estimators
+      - RandomForestRegressorParams.random_state
+      - GradientBoostingRegressor.n_estimators
+      - GradientBoostingRegressor.learning_rate
+      - GradientBoostingRegressor.max_depth
+      - GradientBoostingRegressor.random_state
+      - GradientBoostingRegressor.subsample
+    metrics:
+      - artifacts/report/performace_report.json:
+          cache: false
