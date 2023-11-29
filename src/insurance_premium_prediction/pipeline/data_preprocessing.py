@@ -5,7 +5,7 @@ from src.insurance_premium_prediction.components.data_preprocessing import DataP
 
 STAGE_NAME = "Data Preprocessing"
 
-class DataPreprocessingPipeline:
+class DataPreprocessingTrainingPipeline:
     def __init__(self):
         pass
 
@@ -31,7 +31,7 @@ if __name__ == "__main__":
         log_file = config_manager.get_log_config().running_log # get the log file
 
         log(file_object=log_file, log_message=f"{str('>')*15} Stage: {STAGE_NAME} started {str('<')*15}")
-        obj = DataPreprocessingPipeline()
+        obj = DataPreprocessingTrainingPipeline()
         obj.main()
         log(file_object=log_file, log_message=f"{str('>')*15} Stage: {STAGE_NAME} completed {str('<')*15} \n\n")
 

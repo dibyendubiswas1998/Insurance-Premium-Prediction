@@ -6,7 +6,7 @@ from src.insurance_premium_prediction.components.model_evaluation import ModelEv
 STAGE_NAME = "Model Evaluation"
 
 
-class ModelEvaluationPipeline:
+class ModelEvaluationTrainingPipeline:
     """
         A class responsible for evaluating a machine learning model's performance and logging the results into a 
         workflow management system.
@@ -41,7 +41,7 @@ if __name__ == "__main__":
         log_file = config_manager.get_log_config().running_log # get the log file
 
         log(file_object=log_file, log_message=f"{str('>')*15} Stage: {STAGE_NAME} started {str('<')*15}")
-        obj = ModelEvaluationPipeline()
+        obj = ModelEvaluationTrainingPipeline()
         obj.main()
         log(file_object=log_file, log_message=f"{str('>')*15} Stage: {STAGE_NAME} completed {str('<')*15} \n\n")
 
