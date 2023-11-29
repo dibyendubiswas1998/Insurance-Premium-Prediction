@@ -8,7 +8,8 @@ documents/word files
 config/secrect.yaml
 # package:
 Insurance_Premium_Prediction.egg-info/*
-
+# scripy file:
+script.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

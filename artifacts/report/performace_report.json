@@ -1,0 +1,14 @@
+{
+    "train_matrix": {
+        "r2_score": 0.88,
+        "mean_absolute_error": 2192.82,
+        "mean_squared_error": 16191138.29,
+        "root_mean_squared_error": 4023.82
+    },
+    "test_matrix": {
+        "r2_score": 0.87,
+        "mean_absolute_error": 2524.89,
+        "mean_squared_error": 21410493.98,
+        "root_mean_squared_error": 4627.15
+    }
+}

@@ -178,8 +178,34 @@ class ConfigManager:
             raise ex
 
 
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+        """
+            Retrieves the model evaluation configuration.
+
+            Returns:
+                ModelEvaluationConfig: The model evaluation configuration object.
+
+            Raises:
+                Exception: If there is an error retrieving the configuration.
+        """
+        try:
+            model_evaluation_config = ModelEvaluationConfig(
+                model_path=self.config.artifacts.model.model_path,
+                model_params_path=self.config.artifacts.model.model_params_path,
+                train_data_path=self.config.artifacts.processed_data.train_path,
+                test_data_path=self.config.artifacts.processed_data.test_path,
+                y_feature=self.secrect.data_info.Y_feature,
+                performance_report_path=self.config.artifacts.report.file_name,
+                mlflow_uri=self.secrect.mlflow.MLFLOW_TRACKING_URI,
+                log_file=self.config.logs.log_file
+            )
+            return model_evaluation_config
+
+        except Exception as ex:
+            raise ex
+
 
 
 if __name__ == "__main__":
     cc = ConfigManager()
-    print(cc.get_model_training_config())
+    print(cc.get_model_evaluation_config())

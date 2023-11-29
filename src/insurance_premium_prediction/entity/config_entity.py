@@ -138,3 +138,28 @@ class ModelTrainigConfig:
     grad_random_state: int
     grad_subsample: int
     log_file: Path
+
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    """
+        Represents the configuration for model evaluation.
+
+        Attributes:
+            model_path (Path): The path to the model file.
+            model_params_path (Path): The path to the model parameters file.
+            train_data_path (Path): The path to the training data file.
+            test_data_path (Path): The path to the test data file.
+            y_feature (str): The name of the target feature.
+            performance_report_path (Path): The path to the performance report file.
+            mlflow_uri (str): The URI of the MLflow server.
+            log_file (Path): The path to the log file.
+    """
+    model_path: Path
+    model_params_path: Path
+    train_data_path: Path
+    test_data_path: Path
+    y_feature: str
+    performance_report_path: Path
+    mlflow_uri: str
+    log_file: Path
