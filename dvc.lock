@@ -9,8 +9,8 @@ stages:
       size: 832
     - path: config/secrect.yaml
       hash: md5
-      md5: a8f4ac54c51b698effb0e429450d3c36
-      size: 975
+      md5: 194fc06e366dab7f70e67390d602aafe
+      size: 962
     - path: src/insurance_premium_prediction/pipeline/data_ingestion.py
       hash: md5
       md5: 7e0eb9c8dfd9f46e10a7df67a97b629f
@@ -29,8 +29,8 @@ stages:
       size: 832
     - path: config/secrect.yaml
       hash: md5
-      md5: a8f4ac54c51b698effb0e429450d3c36
-      size: 975
+      md5: 194fc06e366dab7f70e67390d602aafe
+      size: 962
     - path: src/insurance_premium_prediction/pipeline/data_preprocessing.py
       hash: md5
       md5: 24e9f07de03fb0149c2eb28ed4c0e8ea
@@ -65,8 +65,8 @@ stages:
       size: 832
     - path: config/secrect.yaml
       hash: md5
-      md5: a8f4ac54c51b698effb0e429450d3c36
-      size: 975
+      md5: 194fc06e366dab7f70e67390d602aafe
+      size: 962
     - path: src/insurance_premium_prediction/pipeline/model_training.py
       hash: md5
       md5: 3602a3cd98f481948c9a08fa2307e9b6
@@ -111,8 +111,8 @@ stages:
       size: 832
     - path: config/secrect.yaml
       hash: md5
-      md5: a8f4ac54c51b698effb0e429450d3c36
-      size: 975
+      md5: 194fc06e366dab7f70e67390d602aafe
+      size: 962
     - path: src/insurance_premium_prediction/pipeline/model_evaluation.py
       hash: md5
       md5: 614b06b6dbae9ecae1af95232e60d7da
