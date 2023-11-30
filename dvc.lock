@@ -33,8 +33,8 @@ stages:
       size: 962
     - path: src/insurance_premium_prediction/pipeline/data_preprocessing.py
       hash: md5
-      md5: 24e9f07de03fb0149c2eb28ed4c0e8ea
-      size: 1609
+      md5: bd742a505971d8ca86b53025f6cf4508
+      size: 1610
     outs:
     - path: artifacts/processed_data/encoded_metrics.json
       hash: md5

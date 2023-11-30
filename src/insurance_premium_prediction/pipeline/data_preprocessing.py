@@ -18,7 +18,7 @@ class DataPreprocessingTrainingPipeline:
             data = process.remove_duplicate() # remove duplicate
             # data = process.mean_encoding(data=data) # apply mean encoding
             data = process.apply_encoding(data=data) # apply encoding
-            # data = process.handle_outliers(data=data) # handle outliers
+            # data = psrocess.handle_outliers(data=data) # handle outliers
             process.split_and_save_data(data=data) # split and save data
 
         except Exception as ex:

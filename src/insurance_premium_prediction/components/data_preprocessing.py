@@ -250,6 +250,6 @@ if __name__ == "__main__":
 
     data = process.remove_duplicate()
     # data = process.mean_encoding(data=data)
-    # data = process.handle_outliers(data=data)
     data = process.apply_encoding(data=data)
+    data = process.handle_outliers(data=data)
     process.split_and_save_data(data=data)
